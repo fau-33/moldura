@@ -6,6 +6,12 @@
   justify-content: center;
   border: 1px solid gainsboro;
   text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card_depoimento:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 .card_depoimento h3 {

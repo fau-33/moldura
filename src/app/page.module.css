@@ -30,12 +30,35 @@
 
 /* Seção apresentação da página */
 .secao_apresentacao {
-  background-color: #1b3675;
+  background: linear-gradient(135deg, #1b3675 0%, #2a4a9a 50%, #1b3675 100%);
+  background-size: 200% 200%;
   padding: 120px 20px 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.secao_apresentacao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(253, 178, 3, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(253, 178, 3, 0.1) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
 }
 
 .container_texto_apresentacao {
@@ -100,15 +123,25 @@
 
 .container_img_aparelho {
   width: 100%;
-  max-width: 768px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
-  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  overflow: hidden;
+  position: relative;
+  min-height: 300px;
 }
 
 .container_img_aparelho img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Seção beneficios */
@@ -117,6 +150,8 @@
   flex-direction: column;
   padding: 50px 20px;
   gap: 30px;
+  overflow: hidden;
+  position: relative;
 }
 
 .secao_beneficios div h2 {

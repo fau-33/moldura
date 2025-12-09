@@ -1,10 +1,11 @@
+'use client';
+
 import estilos from './page.module.css'
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 import Dente from "../assets/dente.png";
-
-// URLs de imagens do Pexels
-const Aparelho = "https://images.pexels.com/photos/6528864/pexels-photo-6528864.jpeg?auto=compress&cs=tinysrgb&w=800&h=600";
+import Aparelho from "../assets/aparelho.png";
 const Cliente01 = "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
 const Cliente02 = "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
 const Cliente03 = "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
@@ -15,6 +16,30 @@ import CardDepoimento from "./componentes/CardDepoimento";
 import MolduraInformacoes from "./componentes/MolduraInformacoes";
 
 export default function Home() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+
+      // Parallax para a seção de apresentação
+      const apresentacao = document.querySelector(`.${estilos.secao_apresentacao}`);
+      if (apresentacao) {
+        apresentacao.style.backgroundPositionY = `${scrolled * 0.2}px`;
+      }
+
+      // Parallax MUITO sutil para imagem do aparelho
+      const imgAparelho = document.querySelector(`.${estilos.container_img_aparelho}`);
+      if (imgAparelho) {
+        const offset = imgAparelho.getBoundingClientRect().top;
+        if (offset < window.innerHeight && offset > -imgAparelho.offsetHeight) {
+          imgAparelho.style.transform = `translateY(${(scrolled - imgAparelho.offsetTop) * 0.03}px)`;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <header className={estilos.topo}>
