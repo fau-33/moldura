@@ -1,0 +1,11 @@
+.moldura {
+  flex: 1 1 280px;
+  min-height: 300px;
+  height: auto;
+  background-color: gainsboro;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px 20px;
+}

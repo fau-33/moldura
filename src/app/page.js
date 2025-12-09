@@ -1,66 +1,220 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import estilos from './page.module.css'
+import Image from 'next/image';
+
+import Dente from "../assets/dente.png";
+
+// URLs de imagens do Pexels
+const Aparelho = "https://images.pexels.com/photos/6528864/pexels-photo-6528864.jpeg?auto=compress&cs=tinysrgb&w=800&h=600";
+const Cliente01 = "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
+const Cliente02 = "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
+const Cliente03 = "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
+const Dentista01 = "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
+const Dentista02 = "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop";
+
+import CardDepoimento from "./componentes/CardDepoimento";
+import MolduraInformacoes from "./componentes/MolduraInformacoes";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
+    <>
+      <header className={estilos.topo}>
+        <div className={estilos.container_logo}>
+          <Image
+            src={Dente}
+            alt="logo dentes saudáveis"
+            title="logo dentes saudáveis"
+            width={60}
+            height={60}
+          />
+          <p>Dentes Saudáveis</p>
+        </div>
+      </header>
+
+      {/* Apresentação */}
+      <section className={estilos.secao_apresentacao}>
+        <div className={estilos.container_texto_apresentacao}>
+          <h1>
+            Os melhores <span>aparelhos dentários</span>!
+          </h1>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Confira abaixo todas as especialidades odontológicas que temos à sua
+            disposição!
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+        <ul className={estilos.lista_servicos}>
+          <li>
+            <Image src={Dente} alt="logo" title="logo" width={50} height={50} />
+            <p>Pré-avaliação</p>
+          </li>
+
+          <li>
+            <Image src={Dente} alt="logo" title="logo" width={50} height={50} />
+            <p>Aparelhos Dentários</p>
+          </li>
+
+          <li>
+            <Image src={Dente} alt="logo" title="logo" width={50} height={50} />
+            <p>Raio-X digital</p>
+          </li>
+
+          <li>
+            <Image src={Dente} alt="logo" title="logo" width={50} height={50} />
+            <p>Clareamento dental</p>
+          </li>
+        </ul>
+      </section>
+
+      {/* Secao beneficios */}
+      <section className={estilos.secao_beneficios}>
+        <div>
+          <h2 className={estilos.subtitulo}>
+            Por que usar <span>aparelho?</span>
+          </h2>
+          <figure className={estilos.container_img_aparelho}>
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src={Aparelho}
+              alt="Imagem do uso de um aparelho"
+              title="Imagem do uso de um aparelho"
+              width={800}
+              height={600}
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </figure>
         </div>
-      </main>
-    </div>
-  );
+
+        <ul className={estilos.lista_beneficios}>
+          <li>
+            <h3>Alinhar os dentes</h3>
+            <p>
+              Dentes desalinhados causam problemas nos dentes e podem afetar a
+              digestão dos alimentos e a respiração.
+            </p>
+          </li>
+
+          <li>
+            <h3>Melhorar a dicção e a higiene dentária</h3>
+            <p>
+              Muitas pessoas não conseguem nem usar fio dental devido à posição
+              da sua dentição. Contudo, a correção possibilita o cuidado com a
+              saúde bucal de forma bem mais ampla.
+            </p>
+          </li>
+
+          <li>
+            <h3>Corrigir espaço entre os dentes</h3>
+            <p>
+              Uma dentição desalinhada e com espaços significativos incomodam
+              muitas pessoas. Usar aparelho nos dentes é uma das formas mais
+              eficientes para que esses problemas possam ser corrigidos.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      {/* container depoimentos */}
+      <section className={estilos.secao_depoimentos}>
+        <h2 className={estilos.subtitulo}>
+          Veja o que nossos <span>clientes</span> estão falando...
+        </h2>
+
+        <div className={estilos.container_depoimentos}>
+          <CardDepoimento
+            imagem={Cliente01}
+            nome={"Alberto"}
+            descricao={"Por dois anos, eu fiz um tratamento com o Dentes Saudáveis, que me atendeu com profissionalismo e cuidado."}
+          />
+          <CardDepoimento
+            imagem={Cliente02}
+            nome={"Eliana"}
+            descricao={"Por dois anos, eu fiz um tratamento com o Dentes Saudáveis, que me atendeu com profissionalismo e cuidado."}
+          />
+          <CardDepoimento
+            imagem={Cliente03}
+            nome={"Carla"}
+            descricao={"Por dois anos, eu fiz um tratamento com o Dentes Saudáveis, que me atendeu com profissionalismo e cuidado."}
+          />
+        </div>
+      </section>
+
+      {/* Seção Informações */}
+      <section className={estilos.secao_informacoes}>
+        <div className={estilos.container_informacoes}>
+          <MolduraInformacoes>
+            <ul className={estilos.lista_horarios}>
+              <li>Segunda - 09:00 às 18:00</li>
+              <li>Terça - 09:00 às 18:00</li>
+              <li>Quarta - 09:00 às 18:00</li>
+              <li>Quinta - 09:00 às 18:00</li>
+              <li>Sexta - 09:00 às 17:00</li>
+              <li>Sábado - 09:00 às 12:00</li>
+            </ul>
+          </MolduraInformacoes>
+
+          <MolduraInformacoes>
+            <div className={estilos.card}>
+              <figure>
+                <Image
+                  className={estilos.img_aparelho}
+                  src={Dentista01}
+                  alt="Dr. Ana"
+                  title="Dr. Ana"
+                  width={150}
+                  height={150}
+                />
+              </figure>
+              <div>
+                <p>Dra. Ana - Ortodontista</p>
+                <p>Segundas e sextas</p>
+              </div>
+            </div>
+            <div className={estilos.card}>
+              <figure>
+                <Image
+                  className={estilos.img_aparelho}
+                  src={Dentista02}
+                  alt="Dr. Carlos"
+                  title="Dr. Carlos"
+                  width={150}
+                  height={150}
+                />
+              </figure>
+              <div>
+                <p>Dr. Carlos - Endodontia</p>
+                <p>Terças e quartas</p>
+              </div>
+            </div>
+          </MolduraInformacoes>
+
+          <MolduraInformacoes>
+            <p>Ligue para agendar uma consulta:</p>
+            <p>(21) 3699 - 9999</p>
+            <p>(21) 97788 - 5566</p>
+          </MolduraInformacoes>
+        </div>
+      </section>
+
+      {/* Seção localização */}
+      <section className={estilos.secao_localizacao}>
+        <div>
+          <h2 className={estilos.subtitulo}>
+            Onde estamos <span>localizados?</span>
+          </h2>
+          <p>
+            Av. Ayrton Senna, 3000 - Barra da Tijuca, Rio de Janeiro - RJ. CEP:
+            22775-904
+          </p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29385.675969309108!2d-43.384802570898614!3d-22.979322563917293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2c2293fa63%3A0x539cb07246f0e38d!2sVia%20Parque%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1611596986401!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="350"
+        ></iframe>
+      </section>
+
+      <footer className={estilos.rodape}>
+        <div>© Copyright 2025 | Consultório Dentes Saudáveis</div>
+        <div className={estilos.creditos}>Desenvolvido por Flávio Félix</div>
+      </footer>
+    </>
+  )
 }
