@@ -291,15 +291,11 @@ const nextConfig = {
 
 ---
 
-## 📸 Screenshots
+## 🎥 Preview do Site
 
-### Desktop
+Veja o site em ação:
 
-![Desktop View](./screenshots/desktop.png)
-
-### Mobile
-
-![Mobile View](./screenshots/mobile.png)
+![Preview do Site](file:///C:/Users/flavio/.gemini/antigravity/brain/60043c9b-9f57-4a0b-90aa-55108d6d14bb/site_screenshots_1765318297471.webp)
 
 ---
 
