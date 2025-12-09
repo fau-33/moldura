@@ -2,10 +2,13 @@
 
 Site institucional moderno e responsivo para consultório odontológico, desenvolvido com as mais recentes tecnologias web.
 
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://moldura-two.vercel.app/)
 ![Next.js](https://img.shields.io/badge/Next.js-13+-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react)
 ![CSS3](https://img.shields.io/badge/CSS3-Modules-1572B6?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript)
+
+## 🌐 [Ver Site ao Vivo](https://moldura-two.vercel.app/)
 
 ---
 
@@ -142,7 +145,7 @@ moldura/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/moldura.git
+git clone https://github.com/fau-33/moldura.git
 
 # Entre na pasta do projeto
 cd moldura
@@ -321,9 +324,9 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 **Flávio Félix**
 
-- 💼 LinkedIn: [linkedin.com/in/flaviofelix](https://linkedin.com/in/flaviofelix)
-- 🐙 GitHub: [github.com/flaviofelix](https://github.com/flaviofelix)
-- 📧 Email: contato@flaviofelix.dev
+- 💼 LinkedIn: [linkedin.com/in/flavio-felix](https://www.linkedin.com/in/flavio-felix/)
+- 🐙 GitHub: [github.com/fau-33](https://github.com/fau-33)
+- 🌐 Portfolio: [moldura-two.vercel.app](https://moldura-two.vercel.app/)
 
 ---
 
